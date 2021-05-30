@@ -13,7 +13,6 @@ import Twitter from "../Assets/Twitter.png";
 
 function Menu() {
   return (
-<<<<<<< HEAD
     <Fragment>
       <div className="top_bar">
         <div className="part_one">
@@ -56,11 +55,6 @@ function Menu() {
         </Navbar>
       </div>
     </Fragment>
-=======
-    <div>
-      <p>menu sakib</p>
-    </div>
->>>>>>> 0a0537f27aeca99d010832c245e612515266288c
   );
 }
 
