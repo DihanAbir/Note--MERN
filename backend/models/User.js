@@ -13,6 +13,7 @@ const UserSchema = mongoose.Schema({
     required: [true, "Please add an email"],
     unique: [true, "This email is already registered before"],
     match: [
+      // eslint-disable-next-line no-useless-escape
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
       "Please add a valid email",
     ],
