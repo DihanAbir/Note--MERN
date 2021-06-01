@@ -3,7 +3,7 @@ import Rectenglur from '../Assets/Rectangle 20.png'
 import style from'../screen/OtherComponent.module.css'
 
 function CategoryCard() {
-  const[card,setCard] = useState([
+  const[card] = useState([
     {
       cardImg:Rectenglur,
       profileImg:Rectenglur,
