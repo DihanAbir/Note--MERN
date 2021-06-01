@@ -3,7 +3,7 @@ import React from "react";
 function AllCategory() {
   return (
     <div>
-      <p>all category</p>
+      <p>all category saikat</p>
     </div>
   );
 }

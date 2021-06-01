@@ -1,4 +1,4 @@
-.main_class{
+.main_class {
   height: 210vh;
 }
 
@@ -93,7 +93,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 80px;
-
 }
 .footer_copyright {
   position: relative;
