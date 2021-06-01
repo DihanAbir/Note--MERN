@@ -41,8 +41,8 @@ function Menu() {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action1">About</Nav.Link>
+              <Nav.Link href="/all_notes">all Notes</Nav.Link>
+              <Nav.Link href="/note_description">note_description</Nav.Link>
               <Nav.Link href="#action1">Course</Nav.Link>
               <Nav.Link href="#action1">Contact</Nav.Link>
             </Nav>
@@ -59,3 +59,7 @@ function Menu() {
 }
 
 export default Menu;
+
+//landing page -> all catefgoru
+// single category -> all notes
+// notes des ->  all_category
