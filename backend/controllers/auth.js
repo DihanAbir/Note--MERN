@@ -144,11 +144,13 @@ exports.resetPassword = asyncHandler(async(req, res, next) => {
   sendTokenResponse(user, 200, res);
 })
 
+
+
 // @desc   Update  password
-// @route  POST /api/v1/auth/updatedepassword
+// @route  POST /api/v1/auth/updatepassword
 // @access Private
 exports.updatePassword = asyncHandler(async (req, res, next) => {
-  console.log(req.body);
+  // console.log(req.body);
   const user = await User.findById(req.user.id).select('+password');
 
   // Check current passwords
@@ -168,12 +170,22 @@ exports.updatePassword = asyncHandler(async (req, res, next) => {
 // @access Private
 exports.updateDetails = asyncHandler(async (req, res, next) => {
 
-  const fieldsToUpdate = {
-    name : req.body.name,
-    email : req.body.email
+  // const fieldsToUpdate = {
+  //   name : req.body.name,
+  //   email : req.body.email
+  // }
+
+  const {email, name} = req.body ;
+  if(email){
+    req.body.email = email;
   }
+  if(name){
+    req.body.name = name
+  }
+
+
   console.log(req.user);
-  const user = await User.findByIdAndUpdate(req.user.id, fieldsToUpdate,{
+  const user = await User.findByIdAndUpdate(req.user.id, req.body,{
     new : true,
     runValidators : true
   })
@@ -199,7 +211,6 @@ const sendTokenResponse = (user, statusCode, res) => {
 if(process.env.NODE_ENV === 'production'){
       options.secure = true
     }
-
     res
       .status(statusCode)
       .cookie('token', token, options)

@@ -1,5 +1,6 @@
 const express = require('express');
 
+
 const {getAllUser,getSingleUser, getAllNote, getSingleNote, deleteUser, deleteNote } = require('../controllers/admin');
 
 
