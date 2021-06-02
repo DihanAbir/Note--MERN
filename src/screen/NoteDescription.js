@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import style from "../screen/OtherComponent.module.css";
+import React, { useState ,useEffect} from "react";
+import "../screen/OtherComponent.css";
 import CatagoryItem from "../Assets/catagoriitem.png";
 import ImageMan from "../Assets/img.png";
 import Descriptionpic from "../Assets/descriptionpic.png";
@@ -19,47 +19,71 @@ function NoteDescription() {
       level: "something",
     },
   ]);
+
+  const [scrolled, setScrolled] = useState(false);
+
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 350) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+
+  let navbarClasses = ["other_section"];
+  if (scrolled) {
+    navbarClasses.push("scrolled");
+  }
+
+
+
   return (
-    <div className={style.container1}>
-      <div className={style.inner_catagory}>
-        <div className={style.header_catagory}>
+    <div className="container1">
+      <div className="inner_catagory">
+        <div className="header_catagory">
           <p>Course detail</p>
           <h1>User Research for User Experience Design</h1>
         </div>
         {details.map((detail) => (
-          <div className={style.Two_item}>
-            <div className={style.catagory_image}>
+          <div className="Two_item">
+            <div className="catagory_image">
               <img src={detail.catagoryImg} alt="" />
               <h1>{detail.itemHeading}</h1>
-              <p className={style.describtion}>{detail.itemDescribtion}</p>
+              <p className="describtion">{detail.itemDescribtion}</p>
             </div>
 
-            <div className={style.other_section}>
-              <div className={style.other_section1}>
+            <div className={navbarClasses.join(" ")}>
+              <div className="other_section1">
                 <b>enroll:</b>
                 <span>{detail.Enrolled}</span>
                 <hr />
               </div>
-              <div className={style.other_section1}>
+              <div className="other_section1">
                 <b>duration:</b>
                 <span>{detail.duration}</span>
                 <hr />
               </div>
-              <div className={style.other_section1}>
+              <div className="other_section1">
                 <b>lecture:</b>
                 <span>{detail.lecture}</span>
                 <hr />
               </div>
-              <div className={style.other_section1}>
+              <div className="other_section1">
                 <b>catagory:</b>
                 <span>{detail.catagories}</span>
               </div>
-              <div className={style.other_section1}>
+              <div className="other_section1">
                 <b>level:</b>
                 <span>{detail.level}</span>
               </div>
 
-              <div className={style.othersectionpic}>
+              <div className="othersectionpic">
                 <img src={Descriptionpic} alt="" />
                 <p>Contact a customer support at</p>
                 <strong> vctung@outlook.com</strong>

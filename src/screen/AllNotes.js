@@ -7,7 +7,7 @@ function AllNotes() {
   return (
     <>
       <HeroSection />
-      <div className="container">
+      <div className="top_container">
         <div className="inner_container">
           <FilterCustom />
           <CategoryCard />

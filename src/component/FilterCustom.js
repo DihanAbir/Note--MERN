@@ -2,7 +2,7 @@ import React from "react";
 
 function FilterCustom() {
   return (
-    <div className="container header_item">
+    <div className="header_item">
       <div>
         <p>Course category</p>
         <h1>Web Development</h1>

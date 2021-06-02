@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Rectenglur from "../Assets/Rectangle 20.png";
-import style from "../screen/OtherComponent.module.css";
+import "../screen/OtherComponent.css";
 
 function CategoryCard() {
   const [card, setCard] = useState([
@@ -25,15 +25,15 @@ function CategoryCard() {
     },
   ]);
   return (
-    <div className={style.all_cardList}>
+    <div className="all_cardList">
       {card.map((card) => (
-        <div className={style.catagory_card}>
-          <div className={style.card_image}>
-            <img src={card.cardImg} alt="" />
-          </div>
-          <div className={style.card_body}>
+        <div className="catagory_card">
+          <div className="card_image">
             <img src={card.profileImg} alt="" />
-            <div className={style.inside_body}>
+          </div>
+          <div className="card_body">
+            <img src={card.cardImg} alt="" />
+            <div className="inside_body">
               <h1>{card.heading}</h1>
               <p>{card.describtion}</p>
             </div>

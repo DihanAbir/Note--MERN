@@ -12,9 +12,7 @@
   padding: 0px 100px;
   align-items: center;
 }
-.top_bar img {
-  padding-left: 20px;
-}
+
 .our_container {
   background-color: #f0f4f9 !important;
   height: 100px;
@@ -44,7 +42,7 @@
   height: 540px;
   background-color: #f0f4f9;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .button_here {
   background-color: white !important;
@@ -60,15 +58,18 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: center;
+  padding-right: 150px;
 }
 .banner_part_2 {
   padding-top: 30px;
+  padding-left: 150px;
 }
 
 /* catagories */
 .catagory_list{
-  padding: 100px 0px ;
+  padding: 100px 0px;
   background: #fff;
+  margin: 0px 108px;
 }
 .catagory_header{
    text-align: center;
@@ -79,14 +80,17 @@
 
 .subscribe_now {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   height: 630px;
   background-color: white;
 }
 .subscribe_part2 {
-  margin-left: 50px;
-  width: 350px;
+  padding-left: 50px;
+  width: 479px;
+}
+.subscribe_part1{
+  padding-right: 50px;
 }
 .form_style {
   display: flex;
@@ -120,19 +124,18 @@
 .footer_item {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 200px;
+  grid-gap: 360px;
 
 }
 .footer_copyright {
-  position: relative;
-  top: -91px;
-  display: flex;
-  justify-content: space-around;
-  padding: 0px 46px;
-  background-color: #fdc800;
-  height: 92px;
-  align-items: center;
-  margin: 0px 200px;
+ 
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 105px;
+    background-color: #fdc800;
+    height: 92px;
+    align-items: center;
+ 
 }
 .footer_part1 {
   display: flex;
@@ -179,7 +182,7 @@
   justify-content: space-between;
 }
 .filter_option select{
-  width: 200px;
+  width: 260px;
   height: 50px;
 
 }
@@ -189,3 +192,32 @@
    position: relative;
    top: -300px;
  }
+
+
+
+ /* for scroll */
+ .other_section{
+  height: 555px;
+  width: 320px;
+  border: 2px solid;
+}
+.scrolled{
+  position: fixed;
+  top: 0;
+  left: 66%;
+ background-color: #fff;
+}
+
+
+/* top container */
+
+.top_container{
+  margin: 0px 108px;
+}
+
+/* hero section */
+.hero_section{
+  height: 440px;
+   width: 100% ;
+  background-color: #F0F4F9;
+}

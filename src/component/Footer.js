@@ -4,7 +4,7 @@ import Pinterest from "../Assets/Pinterest.png";
 import Instagrame from "../Assets/Instagrame.png";
 import EducationIcon from "../Assets/educationicon.svg";
 import Twitter from "../Assets/Twitter.png";
-import Logo from "../Assets/Logo.png";
+import MainLogo from "../Assets/MainLogo.png";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import EmailIcon from "@material-ui/icons/Email";
 import PhoneIcon from "@material-ui/icons/Phone";
@@ -16,8 +16,8 @@ function Footer() {
         <div className="footer_item">
           <div className="footer_part1">
             <div className="logo_education">
-              <img src={EducationIcon} alt="" height="50px" width="50px" />
-              <h3 style={{ color: "#fff" }}>For education</h3>
+              <img src={MainLogo} alt="" height="50px" width="50px" />
+              <h3 style={{ color: "#fff",paddingLeft:'10px' }}>For education</h3>
             </div>
 
             <div className="footer_information">

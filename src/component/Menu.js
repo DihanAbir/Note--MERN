@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Form, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Logo from "../Assets/Logo.png";
+import MainLogo from "../Assets/MainLogo.png";
 import Button from "../Custom component/Button.js";
 import Search from "../Assets/Search.png";
 import { Fragment } from "react";
@@ -33,15 +33,11 @@ function Menu() {
       <div className="">
         <Navbar className="navbar_class" expand="lg">
           <Link to="/">
-            <img src={Logo} alt="" />
+            <img src={MainLogo} alt="" />
           </Link>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="menu_items ml-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
+            <Nav className="menu_items ml-auto my-2 my-lg-0" navbarScroll>
               <Link to="/all_notes">all Notes</Link>
               <Link to="/note_description">note_description</Link>
               <Link to="#action1">Course</Link>
@@ -50,7 +46,7 @@ function Menu() {
 
             <Form className="d-flex">
               <Button>Sign Up</Button>
-              <img src={Search} alt="" />
+              <img style={{ paddingLeft: "20px" }} src={Search} alt="" />
             </Form>
           </Navbar.Collapse>
         </Navbar>

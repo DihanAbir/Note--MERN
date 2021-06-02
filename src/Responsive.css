@@ -1,14 +1,26 @@
+@media only screen and (max-width: 768px) {
+  .Banner{
+    padding: 0px 10px;
+  }
+  .banner_part_1 {
+    padding-right: 10px;
+  }
+  .banner_part_2 {
+    padding-left: 10px;
+  }
+  .footer_item {
+grid-gap: 0px;
+  }
+}
 @media screen and (max-width: 680px) {
   /* topbar */
-  
-  
+
   .top_bar {
     padding: 0px;
   }
 
   .part_one {
     display: flex;
-   
   }
   .part_one span {
     display: none;
@@ -20,7 +32,7 @@
   .navbar_class {
     padding: 20px !important;
     display: flex;
-  
+
     flex-direction: row;
   }
   .Banner {
@@ -29,25 +41,36 @@
     height: 651px;
   }
   .banner_part_1 {
-    padding: 0;
+    padding: 10px;
   }
- 
+  .banner_part_2 {
+    padding: 0px;
+  }
   .banner_part_2 img {
     width: 100%;
     height: 80%;
   }
+  /* catagory */
+  .catagory_list {
+    margin: 0px 10px;
+  }
+
   /* subscribebar */
   .subscribe_now {
     display: flex;
     flex-wrap: wrap;
-    
+    overflow-y: hidden;
+    height: auto;
   }
-
-  .subscribe_part1 img{
-      height: 100%;
-      width: 80%;
+  .subscribe_part1 {
+    padding: 10px;
+  }
+  .subscribe_part1 img {
+    height: 100%;
+    width: 80%;
   }
   .subscribe_part2 {
+    padding: 10px;
     margin: 0px;
     width: -moz-fit-content;
     width: fit-content;
@@ -55,19 +78,15 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-   
   }
-  .subscribe_part2 h1{
-      text-align: center;
+  .subscribe_part2 h1 {
+    text-align: center;
   }
   .form_style {
-   
     padding: 0px 10px;
     flex-wrap: wrap;
-
-
   }
-  
+
   /* footer */
 
   .footer_style {
@@ -77,26 +96,28 @@
     flex-flow: column;
   }
   .footer_item {
-    /* grid-gap: 0px; */
+    grid-gap: 20px;
     display: flex;
     flex-direction: column;
   }
- 
+  .footer_part1 {
+    padding: 0px 35px;
+  }
   .footer_part2 {
     justify-content: space-evenly;
-
   }
-  .item_1,.item_2,.item_3{
-  padding: 0px;
+  .item_1,
+  .item_2,
+  .item_3 {
+    padding: 0px;
   }
   .footer_copyright {
     margin: 0px;
 
     position: relative;
-    top: 0;
-    padding: 0px;
+
+    padding: 10px;
   }
 
   /* container */
- 
 }
