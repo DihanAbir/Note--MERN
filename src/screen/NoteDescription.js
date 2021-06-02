@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import style from "../screen/OtherComponent.module.css";
 import CatagoryItem from "../Assets/catagoriitem.png";
 import ImageMan from "../Assets/img.png";
+import Descriptionpic from "../Assets/descriptionpic.png";
 
-function SingleCategory() {
+function NoteDescription() {
   const [details, setDetails] = useState([
     {
       catagoryImg: CatagoryItem,
       itemHeading: "Describtion",
-      itemDescribtion: "Lorem ipsum dolor sit amet consectetur adipisicing elitIure",
+      itemDescribtion:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elitIure",
 
       Enrolled: "something",
       duration: "something",
@@ -18,7 +20,7 @@ function SingleCategory() {
     },
   ]);
   return (
-    <div className={style.Single_catagory}>
+    <div className={style.container1}>
       <div className={style.inner_catagory}>
         <div className={style.header_catagory}>
           <p>Course detail</p>
@@ -29,35 +31,40 @@ function SingleCategory() {
             <div className={style.catagory_image}>
               <img src={detail.catagoryImg} alt="" />
               <h1>{detail.itemHeading}</h1>
-              <p className={style.describtion}>
-               {detail.itemDescribtion}
-              </p>
+              <p className={style.describtion}>{detail.itemDescribtion}</p>
             </div>
 
             <div className={style.other_section}>
               <div className={style.other_section1}>
-                <b>enroll</b>
+                <b>enroll:</b>
                 <span>{detail.Enrolled}</span>
                 <hr />
               </div>
               <div className={style.other_section1}>
-                <b>duration</b>
+                <b>duration:</b>
                 <span>{detail.duration}</span>
                 <hr />
               </div>
               <div className={style.other_section1}>
-                <b>lecture</b>
+                <b>lecture:</b>
                 <span>{detail.lecture}</span>
                 <hr />
               </div>
               <div className={style.other_section1}>
-                <b>catagory</b>
+                <b>catagory:</b>
                 <span>{detail.catagories}</span>
               </div>
               <div className={style.other_section1}>
-                <b>level</b>
+                <b>level:</b>
                 <span>{detail.level}</span>
               </div>
+
+              <div className={style.othersectionpic}>
+                <img src={Descriptionpic} alt="" />
+                <p>Contact a customer support at</p>
+                <strong> vctung@outlook.com</strong>
+              </div>
+              
             </div>
           </div>
         ))}
@@ -66,7 +73,7 @@ function SingleCategory() {
   );
 }
 
-export default SingleCategory;
+export default NoteDescription;
 
 {
   /* <div className="profie">

@@ -5,3 +5,10 @@
     background: #fdc800;
     border: transparent;
 }    
+.button_style:hover{
+
+    background-color: #e0bb35;
+}
+.button_style:focus{
+  border: 2px solid;
+}

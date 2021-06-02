@@ -20,15 +20,15 @@ function Footer() {
               <h3 style={{ color: "#fff" }}>For education</h3>
             </div>
 
-            <div>
+            <div className="footer_information">
               <LocationOnIcon style={{ color: "#fff" }} />
               <span>1500 Treat Ave, Suite 200 San Francisco, CA 94110</span>
             </div>
-            <div>
+            <div className="footer_information">
               <EmailIcon style={{ color: "#fff" }} />
               <span>vctung@outlook.com</span>
             </div>
-            <div>
+            <div className="footer_information">
               <PhoneIcon style={{ color: "#fff" }} />
               <span>1-800-800-2299 (Support)</span>
             </div>

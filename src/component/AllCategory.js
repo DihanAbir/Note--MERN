@@ -1,9 +1,14 @@
 import React from "react";
+import CategoryCard from "./CategoryCard";
 
 function AllCategory() {
   return (
-    <div>
-      <p>all category</p>
+    <div className="catagory_list container">
+      <h1 className="catagory_header">Top Featured Courses</h1>
+
+      <div className="course_list">
+        <CategoryCard/>
+      </div>
     </div>
   );
 }

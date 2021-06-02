@@ -1,12 +1,19 @@
 import React from "react";
+import CategoryCard from "../component/CategoryCard";
 import FilterCustom from "../component/FilterCustom";
+import HeroSection from "../component/HeroSection";
 
 function AllNotes() {
   return (
-    <div>
-      <FilterCustom />
-      <p>AllNotes</p>
-    </div>
+    <>
+      <HeroSection />
+      <div className="container">
+        <div className="inner_container">
+          <FilterCustom />
+          <CategoryCard />
+        </div>
+      </div>
+    </>
   );
 }
 

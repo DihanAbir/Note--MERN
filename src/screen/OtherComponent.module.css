@@ -1,17 +1,36 @@
-.Single_catagory{
-    height: 542px;
-    background-color: #F0F4F9;
+.container1{
+    padding: 0 150px;
 }
+@media screen and (max-width: 680px) {
+    .container1{
+        padding: 0px 20px;
+        align-items: center;
+    }
+    .catagory_image img{
+        width: 100% !important;
+        height: auto !important;
+    }
+    .Two_item{
+        justify-content: center !important;
+    }
+    .other_section{
+        width: 400px !important;
+    }
+    .catagory_image{
+        padding-right: 0px;
+    }
+}  
+
 .inner_catagory{
-    position: relative;
-    top: 231px
+    padding-top: 100px;
 }
 .header_catagory{
     display: flex;
     /* text-align: center; */
     align-items: flex-start;
     flex-direction: column;
-    padding: 0px 33vh;
+    padding-bottom: 50px;
+   
 
 }
 .inner_catagory p{
@@ -23,9 +42,12 @@
 
 .Two_item{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+
 .describtion{
+   
     width: 400px;
     color: black !important;
 }
@@ -36,6 +58,9 @@
     width: 700px;
     height: 555px;
 }
+.catagory_image h1{
+    padding-top: 50px;
+}
 
 /* other section */
 
@@ -45,7 +70,14 @@
     border: 2px solid;
 }
 
-
+.other_section1{
+   
+    padding: 0px 22px;
+    margin-top: 22px;
+}
+.other_section1 b{
+    padding-right: 10px;
+}
 
 .profie{
     position: relative;
@@ -55,16 +87,28 @@
     width: 349px;
     border: 1px solid;
 }
-
+.othersectionpic{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 /*single card  */
 .all_cardList{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card_image img{
+    width: 100%;
 }
 .catagory_card{
-    height: 369px;
+    height: 331px;
     width:370px ;
+    /* margin: 20px; */
     box-shadow: 0px 0px 1.4px black;
     
 }
@@ -73,5 +117,12 @@
     width: 64px;
     border: 6px solid gray;
     position: relative;
-    top: -30px;
+    top: -40px;
+    left: 8px;
+}
+.inside_body{
+    position: relative;
+    top: -37px;
+    padding: 0px 10px;
+
 }
