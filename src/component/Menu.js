@@ -40,6 +40,9 @@ function Menu() {
             <Nav className="menu_items ml-auto my-2 my-lg-0" navbarScroll>
               <Link to="/all_notes">all Notes</Link>
               <Link to="/note_description">note_description</Link>
+              <Link className="text-danger" to="/profile">
+                Profile
+              </Link>
               <Link to="#action1">Course</Link>
               <Link to="#action1">Contact</Link>
             </Nav>
