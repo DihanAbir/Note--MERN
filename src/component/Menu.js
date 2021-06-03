@@ -32,7 +32,7 @@ function Menu() {
       {/* top bar end */}
       <div className="">
         <Navbar className="navbar_class" expand="lg">
-          <Link to="/">
+          <Link to="/" className="Logo_design">
             <img src={MainLogo} alt="" />
           </Link>
           <Navbar.Toggle aria-controls="navbarScroll" />

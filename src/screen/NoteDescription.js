@@ -1,5 +1,5 @@
 import React, { useState ,useEffect} from "react";
-import "../screen/OtherComponent.scss";
+import "../Mycss/OtherComponent.scss";
 import CatagoryItem from "../Assets/catagoriitem.png";
 import ImageMan from "../Assets/img.png";
 import Descriptionpic from "../Assets/descriptionpic.png";
@@ -25,7 +25,7 @@ function NoteDescription() {
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (offset > 350) {
+    if (offset > 380) {
       setScrolled(true);
     } else {
       setScrolled(false);
