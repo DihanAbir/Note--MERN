@@ -1,0 +1,131 @@
+.container1{
+    padding: 0 100px;
+}
+@media screen and (max-width: 680px) {
+    .container1{
+        padding: 0px 20px;
+        align-items: center;
+    }
+    .catagory_image img{
+        width: 100% !important;
+        height: auto !important;
+    }
+    .Two_item{
+        justify-content: center !important;
+    }
+    .inner_catagory{
+        padding-top: 20px !important;
+    }
+    .other_section{
+        width: 280px !important;
+       
+        left: 15px;
+        height: 408px;
+        line-height: 4px;
+    }
+    .catagory_image{
+        padding-right: 0px;
+    }
+}  
+
+.inner_catagory{
+    padding-top: 100px;
+}
+.header_catagory{
+    display: flex;
+    /* text-align: center; */
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 50px;
+   
+
+}
+.inner_catagory p{
+   color: #FDC800;
+}
+.inner_catagory h1{
+    color: #002147;
+}
+
+.Two_item{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.describtion{
+   
+    width: 400px;
+    color: black !important;
+}
+.catagory_image{
+   padding-right: 20px;
+}
+.catagory_image img{
+    width: 700px;
+    height: 555px;
+}
+.catagory_image h1{
+    padding-top: 50px;
+}
+
+/* other section */
+
+
+
+.other_section1{
+   
+    padding: 0px 22px;
+    margin-top: 22px;
+}
+.other_section1 b{
+    padding-right: 10px;
+}
+
+.profie{
+    position: relative;
+    top: 300px;
+    text-align: center;
+    height: 263px;
+    width: 349px;
+    border: 1px solid;
+}
+.othersectionpic{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*single card  */
+.all_cardList{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card_image img{
+    width: 100%;
+}
+.catagory_card{
+    height: auto;
+    width:370px ;
+    /* margin: 20px; */
+    box-shadow: 0px 0px 1.4px black;
+    
+}
+.card_body img{
+    height: 64px;
+    width: 64px;
+    border: 6px solid gray;
+    position: relative;
+    top: -40px;
+    left: 8px;
+}
+.inside_body{
+    position: relative;
+    top: -37px;
+    padding: 0px 10px;
+
+}

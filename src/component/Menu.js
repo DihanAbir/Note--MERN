@@ -1,6 +1,7 @@
 import React from "react";
-import { Navbar, Nav, Form } from "react-bootstrap";
-import Logo from "../Assets/Logo.png";
+import { Navbar, Nav, Form, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import MainLogo from "../Assets/MainLogo.png";
 import Button from "../Custom component/Button.js";
 import Search from "../Assets/Search.png";
 import { Fragment } from "react";
@@ -29,28 +30,26 @@ function Menu() {
         </div>
       </div>
       {/* top bar end */}
-      <div className="our_container">
+      <div className="">
         <Navbar className="navbar_class" expand="lg">
-          <Navbar.Brand href="#">
-            <img src={Logo} alt="" />
-          </Navbar.Brand>
+          <Link to="/">
+            <img src={MainLogo} alt="" />
+          </Link>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="ml-auto my-2 my-lg-0"
-              style={{ maxHeight: "100px" }}
-              navbarScroll
-            >
-              <Nav.Link href="/all_notes">all Notes</Nav.Link>
-              <Nav.Link href="/note_description">note_description</Nav.Link>
-              <Nav.Link href="#action1">Course</Nav.Link>
-              <Nav.Link href="#action1">Contact</Nav.Link>
+            <Nav className="menu_items ml-auto my-2 my-lg-0" navbarScroll>
+              <Link to="/all_notes">all Notes</Link>
+              <Link to="/note_description">note_description</Link>
+              <Link to="#action1">Course</Link>
+              <Link to="#action1">Contact</Link>
             </Nav>
 
-            <Form className="d-flex">
-              <Button>Sign Up</Button>
-              <img src={Search} alt="" />
-            </Form>
+            <div className="d-flex">
+              <Link to="/login">
+                <Button>Log In</Button>
+              </Link>
+              <img style={{ paddingLeft: "20px" }} src={Search} alt="" />
+            </div>
           </Navbar.Collapse>
         </Navbar>
       </div>
