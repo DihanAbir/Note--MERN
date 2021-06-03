@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-const { populate } = require("../models/Note");
+// const { populate } = require("../models/Note");
 
 const advancedResults = (model, populate) => async (req, res, next) => {
   let query;

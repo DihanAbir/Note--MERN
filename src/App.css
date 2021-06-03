@@ -1,8 +1,8 @@
-.main_class {
+<<<<<<< HEAD .main_class {
   height: 210vh;
 }
 
-.container {
+=======>>>>>>>saikat .container {
   padding: 0 !important;
 }
 
@@ -125,8 +125,7 @@
 .footer_item {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 80px;
-  /* grid-gap: 360px; */
+  grid-gap: 360px;
 }
 .footer_copyright {
   display: flex;

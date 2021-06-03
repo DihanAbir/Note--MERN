@@ -10,7 +10,7 @@ exports.createNote = asyncHandler(async(req, res, next) => {
     // Add user to req,body
     req.body.user = req.user.id;
 
-    const note = await Note.create(req.body);
+    const note = await Note.create(req.body)
 
     if(!note){
         return next(new ErrorResponse(`can't find things on req.body`, 400 ));

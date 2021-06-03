@@ -16,11 +16,12 @@ const router = express.Router();
 
 const { protect, authorize } = require("../middleware/auth");
 
+
 // /api/v1/note/:userid/all
 router
   .route("/")
   .post(protect, authorize("admin", "user"), createNote)
-  .get(advancedResults(Note), getAllNote);
+  .get(advancedResults(Note, 'user'), getAllNote);
 router
   .route("/:id")
   .get(protect, authorize("admin", "user"), getNoteByID)

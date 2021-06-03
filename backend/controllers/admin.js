@@ -23,7 +23,7 @@ exports.getAllUser = asyncHandler(async (req, res, next) => {
 // @route  GET /api/v1/admin/getalluser
 // @access Privet
 exports.getAllNote = asyncHandler(async (req, res, next) => {
-  const notes = await Note.find();
+  const notes = await Note.find().populate('user')
 
   if (!notes) {
     return next(new ErrorResponse(`can't find any notes`, 400));
