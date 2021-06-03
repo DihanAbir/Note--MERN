@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar, Nav, Form, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import MainLogo from "../Assets/MainLogo.png";
@@ -13,6 +13,14 @@ import Instagrame from "../Assets/Instagrame.png";
 import Twitter from "../Assets/Twitter.png";
 
 function Menu() {
+  const [user, setUser] = useState(null);
+  let userInfo;
+  useEffect(() => {
+    userInfo = localStorage.getItem("userInfo");
+    setUser(userInfo);
+    console.log(`userInfo`, userInfo.success);
+  }, [userInfo]);
+
   return (
     <Fragment>
       <div className="top_bar">
@@ -40,6 +48,7 @@ function Menu() {
             <Nav className="menu_items ml-auto my-2 my-lg-0" navbarScroll>
               <Link to="/all_notes">all Notes</Link>
               <Link to="/note_description">note_description</Link>
+              <Link to="/profie">Profie</Link>
               <Link to="#action1">Course</Link>
               <Link to="#action1">Contact</Link>
             </Nav>
