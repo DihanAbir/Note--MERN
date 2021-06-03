@@ -13,8 +13,15 @@
     .Two_item{
         justify-content: center !important;
     }
+    .inner_catagory{
+        padding-top: 20px !important;
+    }
     .other_section{
-        width: 400px !important;
+        width: 280px !important;
+       
+        left: 15px;
+        height: 408px;
+        line-height: 4px;
     }
     .catagory_image{
         padding-right: 0px;

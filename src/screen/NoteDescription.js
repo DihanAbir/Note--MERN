@@ -1,5 +1,5 @@
 import React, { useState ,useEffect} from "react";
-import "../screen/OtherComponent.css";
+import "../screen/OtherComponent.scss";
 import CatagoryItem from "../Assets/catagoriitem.png";
 import ImageMan from "../Assets/img.png";
 import Descriptionpic from "../Assets/descriptionpic.png";
