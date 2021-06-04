@@ -24,7 +24,25 @@
   padding: 20px 100px !important;
 }
 
+<<<<<<< HEAD
 .menu_items a {
+=======
+
+/* logo */
+
+.Logo_design{
+
+
+}
+.Logo_design:hover{
+  box-shadow: 0px 0px 2px rgb(138, 135, 135);
+ transform: translateY(-5px);
+ transition: .5s;
+}
+
+
+.menu_items a{
+>>>>>>> sakib
   font-family: inter;
   text-decoration: none;
   padding: 10px;
@@ -198,8 +216,13 @@
 .scrolled {
   position: fixed;
   top: 0;
+<<<<<<< HEAD
   left: 66%;
   background-color: #fff;
+=======
+  left: 70%;
+ background-color: #fff;
+>>>>>>> sakib
 }
 
 /* top container */
