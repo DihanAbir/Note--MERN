@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import CategoryCard from "../component/CategoryCard";
 import FilterCustom from "../component/FilterCustom";
 import HeroSection from "../component/HeroSection";
 
 function AllNotes() {
   return (
-    <>
+    <div>
       <HeroSection />
       <div className="top_container">
         <div className="inner_container">
@@ -13,7 +13,7 @@ function AllNotes() {
           <CategoryCard />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
