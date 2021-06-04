@@ -5,7 +5,7 @@ import HeroSection from "../component/HeroSection";
 
 function AllNotes() {
   return (
-    <>
+    <div>
       <HeroSection />
       <div className="top_container">
         <div className="inner_container">
@@ -13,7 +13,7 @@ function AllNotes() {
           <CategoryCard />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar, Nav, Form, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import MainLogo from "../Assets/MainLogo.png";
@@ -13,6 +13,14 @@ import Instagrame from "../Assets/Instagrame.png";
 import Twitter from "../Assets/Twitter.png";
 
 function Menu() {
+  const [user, setUser] = useState(null);
+  let userInfo;
+  useEffect(() => {
+    userInfo = localStorage.getItem("userInfo");
+    setUser(userInfo);
+    console.log(`userInfo`, userInfo.success);
+  }, [userInfo]);
+
   return (
     <Fragment>
       <div className="top_bar">

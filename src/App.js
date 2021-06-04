@@ -1,11 +1,14 @@
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
+
 import Landing from "./screen/Landing";
+import Footer from "./component/Footer";
 import AllNotes from "./screen/AllNotes";
 import Menu from "../src/component/Menu";
-import NoteDescription from "./screen/NoteDescription";
-import Footer from "./component/Footer";
 import SubscribeNow from "./component/SubscribeNow";
 import Login from "./screen/Login";
 import Profile from "./screen/Profile";
