@@ -1,3 +1,20 @@
+@media only screen and (min-width: 800px) and (max-width: 1030px){
+  .Banner {
+    padding: 0px 25px;
+  }
+  .banner_part_1 {
+    padding-right: 10px;
+  }
+  .banner_part_2 {
+    padding-left: 10px;
+  }
+  .footer_item {
+    grid-gap: 0px;
+  }
+
+}
+
+
 @media only screen and (min-width: 681px) and (max-width: 940px) {
   .Banner {
     padding: 0px 25px;
@@ -61,6 +78,12 @@
   }
   .top_container {
     margin: 0px 46px;
+  }
+
+  .footer_copyright {
+    margin: 0px;
+    position: relative;
+    padding: 0px 20px;
   }
 }
 @media screen and (max-width: 680px) {
@@ -181,4 +204,12 @@
   .navbar_class {
     padding: 4px 10px !important;
   }
+}
+@media screen and (max-width: 376px){
+  .all_cardList{
+    justify-content: center;
+  }
+  .catagory_card{
+    width: 306px;
+  } 
 }
