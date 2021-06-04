@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Landing from "./screen/Landing";
 import AllNotes from "./screen/AllNotes";
 import Menu from "../src/component/Menu";
-import NoteDescription from "./screen/NoteDescription";
+import NoteDescription from "./component/NoteDescription.js";
 import Footer from "./component/Footer";
 import SubscribeNow from "./component/SubscribeNow";
 function App() {

@@ -1,0 +1,30 @@
+.catagory_list{
+    padding: 100px 0px;
+    background: #fff;
+    margin: 0px 108px;
+  }
+  .catagory_header{
+     text-align: center;
+    margin-bottom: 70px;
+  }
+  
+
+  @media screen and (max-width: 376px){
+    
+    .catagory_card{
+      width: 306px;
+    } 
+  }
+
+  
+@media screen and (max-width: 680px) {
+ 
+  .catagory_list {
+    margin: 0px 31px;
+  }
+  .Two_item {
+    width: 378px;
+  }
+
+}
+

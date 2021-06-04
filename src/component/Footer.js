@@ -9,6 +9,8 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 import EmailIcon from "@material-ui/icons/Email";
 import PhoneIcon from "@material-ui/icons/Phone";
 
+import '../Mycss/Footer.css';
+
 function Footer() {
   return (
     <Fragment>

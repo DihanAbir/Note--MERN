@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Rectenglur from "../Assets/Rectangle 20.png";
-import "../Mycss//OtherComponent.scss";
+
 import { Link } from "react-router-dom";
+import '../Mycss/CatagoryCard.css'
 
 function CategoryCard() {
   const [card, setCard] = useState([

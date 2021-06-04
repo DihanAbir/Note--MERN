@@ -1,0 +1,17 @@
+.filter_option{
+    margin-top: 100px;
+    display: flex;
+    padding-bottom: 50px;
+    justify-content: space-between;
+  }
+  .filter_option select{
+    width: 260px;
+    height: 50px;
+  
+  }
+
+  @media only screen and (min-width: 681px) and (max-width: 940px) {
+    .filter_option select {
+      width: 161px;
+    }
+  }

@@ -1,8 +1,9 @@
 import React, { useState ,useEffect} from "react";
-import "../Mycss/OtherComponent.scss";
+
 import CatagoryItem from "../Assets/catagoriitem.png";
 import ImageMan from "../Assets/img.png";
 import Descriptionpic from "../Assets/descriptionpic.png";
+import '../Mycss/NoteDescribtion.css'
 
 function NoteDescription() {
   const [details, setDetails] = useState([

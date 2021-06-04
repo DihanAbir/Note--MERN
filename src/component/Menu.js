@@ -2,7 +2,8 @@ import React from "react";
 import { Navbar, Nav, Form, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import MainLogo from "../Assets/MainLogo.png";
-import Button from "../Custom component/Button.js";
+
+import Button from "./Button.js";
 import Search from "../Assets/Search.png";
 import { Fragment } from "react";
 import Location from "../Assets/Location.svg";
@@ -11,6 +12,7 @@ import Facebook from "../Assets/facebook.png";
 import Pinterest from "../Assets/Pinterest.png";
 import Instagrame from "../Assets/Instagrame.png";
 import Twitter from "../Assets/Twitter.png";
+import '../Mycss/Menu.css'
 
 function Menu() {
   return (

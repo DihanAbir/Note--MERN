@@ -1,5 +1,6 @@
 import React from "react";
 import CategoryCard from "./CategoryCard";
+import '../Mycss/AllCategory.css'
 
 function AllCategory() {
   return (
