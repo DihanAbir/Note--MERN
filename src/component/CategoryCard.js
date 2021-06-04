@@ -3,7 +3,7 @@ import Rectenglur from "../Assets/Rectangle 20.png";
 import "../screen/OtherComponent.scss";
 
 function CategoryCard() {
-  const [card, setCard] = useState([
+  const [card] = useState([
     {
       cardImg: Rectenglur,
       profileImg: Rectenglur,
