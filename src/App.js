@@ -16,7 +16,7 @@ function App() {
         <Route exact path="/all_notes" component={AllNotes} />
         <Route exact path="/note_description" component={NoteDescription} />
       </Switch>
-      <SubscribeNow />
+    
       <Footer />
     </Router>
   );
