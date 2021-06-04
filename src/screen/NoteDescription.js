@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "../Mycss/OtherComponent.scss";
 import CatagoryItem from "../Assets/catagoriitem.png";
 import ImageMan from "../Assets/img.png";
@@ -22,7 +22,6 @@ function NoteDescription() {
 
   const [scrolled, setScrolled] = useState(false);
 
-
   const handleScroll = () => {
     const offset = window.scrollY;
     if (offset > 380) {
@@ -40,8 +39,6 @@ function NoteDescription() {
   if (scrolled) {
     navbarClasses.push("scrolled");
   }
-
-
 
   return (
     <div className="container1">
@@ -88,7 +85,6 @@ function NoteDescription() {
                 <p>Contact a customer support at</p>
                 <strong> vctung@outlook.com</strong>
               </div>
-              
             </div>
           </div>
         ))}

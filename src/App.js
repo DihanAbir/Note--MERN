@@ -11,6 +11,7 @@ import AllNotes from "./screen/AllNotes";
 import Menu from "../src/component/Menu";
 import SubscribeNow from "./component/SubscribeNow";
 import Login from "./screen/Login";
+import NoteDescription from "./screen/NoteDescription";
 import Profile from "./screen/Profile";
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route exact path="/all_notes" component={AllNotes} />
-        <Route exact path="/login" component={Login} />
+        {/* <Route exact path="/login" component={Login} /> */}
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/note_description" component={NoteDescription} />
       </Switch>
