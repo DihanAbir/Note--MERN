@@ -21,7 +21,7 @@ function App() {
         <Route exact path="/all_notes" component={AllNotes} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/profile" component={Profile} />
-        <Route exact path="/note_description" component={NoteDescription} />
+        {/* <Route exact path="/note_description" component={NoteDescription} /> */}
       </Switch>
       <SubscribeNow />
       <Footer />
