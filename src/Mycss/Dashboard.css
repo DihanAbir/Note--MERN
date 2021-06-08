@@ -4,12 +4,88 @@
   --red: #ff606d;
 }
 
+/* fixings */
+ul,
+li,
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+
+/* start the css style */
+
+.dashboard {
+  font-family: "Poppins", sans-serif;
+}
+
 .dashboard .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 10;
 }
 
+.dashboard .top-profile {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 0rem;
+}
+
+.dashboard .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard .image {
+  border-radius: 50%;
+}
+
 .dashboard .name {
   font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+  padding-top: 1em;
+}
+
+.profile .top-profile span {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.dashboard .status {
+  color: #a2a2c2;
+}
+
+.dashboard .welcome-back {
+  background-color: #f7e5e9;
+  margin-top: 100px;
+}
+.dashboard .welcome-back ul {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dashboard .welcome-back img {
+  width: 208px;
+  height: 219px;
+  margin-top: -60px;
+}
+
+/* Small tablet styles */
+@media screen and (min-width: 620px) {
+}
+
+/* larger tablet & laptop */
+@media screen and (min-width: 960px) {
+}
+
+/* desktop styles */
+@media screen and (min-width: 960px) {
 }
