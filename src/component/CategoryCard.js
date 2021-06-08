@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Rectenglur from "../Assets/Rectangle 20.png";
-import "../Mycss//OtherComponent.scss";
+
 import { Link } from "react-router-dom";
+import '../Mycss/CatagoryCard.css'
 
 function CategoryCard() {
-  const [card] = useState([
+  const [card, setCard] = useState([
     {
       cardImg: Rectenglur,
       profileImg: "https://c.files.bbci.co.uk/1433C/production/_117684728_zeroconceptcar.jpg",

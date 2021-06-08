@@ -1,7 +1,8 @@
 import React from "react";
 import RecreatingPhoto from "../Assets/Recruiting.png";
 import Email from "../Assets/Email.svg";
-import Button from '../Custom component/Button.js'
+import Button from './Button'
+import '../Mycss/SubscribeNow.css'
 
 const SubscribeNow = () => {
   return (

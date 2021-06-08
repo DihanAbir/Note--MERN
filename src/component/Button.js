@@ -1,9 +1,9 @@
 import React from "react";
-import "./Button.scss";
+import "../Mycss/Button.css";
 
 const Button = (props) => {
   return (
-    <button className="button_style" onClick={props.children}>
+    <button className="button_style">
       {props.children}
     </button>
   );

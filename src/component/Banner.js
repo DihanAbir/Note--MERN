@@ -1,7 +1,7 @@
 import React from "react";
-import Button from "../Custom component/Button.js";
+import Button from "./Button.js";
 import Analytic from "../Assets/Analytic.svg";
-import "../Responsive.css";
+import '../Mycss/Banner.css'
 
 function Banner() {
   return (

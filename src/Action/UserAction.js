@@ -1,4 +1,3 @@
-import axios from "axios";
 import {
   USER_LOGIN_FAIL,
   USER_LOGIN_REQUEST,
@@ -6,7 +5,8 @@ import {
   USER_REGISTER_FAIL,
   USER_REGISTER_REQUEST,
   USER_REGISTER_SUCCESS,
-} from "../constant/UserConstant";
+} from "../constants/UserConstants";
+import axios from 'axios';
 
 //login
 export const login = (email, password) => async (dispatch) => {
@@ -31,8 +31,8 @@ export const login = (email, password) => async (dispatch) => {
     dispatch({
       type: USER_LOGIN_FAIL,
       payload:
-        error.response && error.response.data.message
-          ? error.response.data.message
+        error.response && error.response.data.error
+          ? error.response.data.error
           : error.message,
     });
   }
@@ -67,3 +67,9 @@ export const register = (name, email, password) => async (dispatch) => {
     });
   }
 };
+
+
+
+        // error.response && error.response.data.error
+        //   ? error.response.data.error
+        //   : error.message,
