@@ -2,9 +2,10 @@
   --primary-black: #111026;
   --blue: #5e81f4;
   --red: #ff606d;
+  --gray: #a2a2c2;
 }
 
-/* fixings */
+/* no.1 fixings */
 ul,
 li,
 a {
@@ -12,6 +13,10 @@ a {
 }
 li {
   list-style-type: none;
+  padding-left: 1em;
+}
+body {
+  box-sizing: border-box;
 }
 
 /* start the css style */
@@ -20,12 +25,13 @@ li {
   font-family: "Poppins", sans-serif;
 }
 
-.dashboard .grid {
+/* .dashboard .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 10;
-}
+} */
 
+/* Profile start */
 .dashboard .top-profile {
   display: flex;
   justify-content: space-between;
@@ -42,6 +48,7 @@ li {
 
 .dashboard .image {
   border-radius: 50%;
+  width: 57%;
 }
 
 .dashboard .name {
@@ -58,6 +65,9 @@ li {
   font-size: 17px;
 }
 
+/* profile end */
+
+/* Welcome start */
 .dashboard .status {
   color: #a2a2c2;
 }
@@ -65,6 +75,7 @@ li {
 .dashboard .welcome-back {
   background-color: #f7e5e9;
   margin-top: 100px;
+  padding-bottom: 5px;
 }
 .dashboard .welcome-back ul {
   width: 80%;
@@ -77,6 +88,111 @@ li {
   height: 219px;
   margin-top: -60px;
 }
+.title-and-date {
+  padding-left: 1.5rm;
+  align-self: center;
+}
+.dashboard .welcome-back h3 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #ff808b;
+  padding-top: 10px;
+}
+.dashboard .welcome-back p {
+  font-size: 18px;
+}
+
+/* welcome end */
+
+/* reminders start  */
+.dashboard .reminders {
+  padding: 10px 0px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+.dashboard .reminders .top {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.dashboard .reminders .body {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+.dashboard .reminders .body .logo {
+  width: 54px;
+  height: 54px;
+  /* border: 1px solid black; */
+  position: relative;
+  background: #fef2f3;
+  border-radius: 12%;
+}
+.dashboard .reminders .body .logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dashboard .reminders .title {
+  color: var(--primary-black);
+}
+.dashboard .reminders .date {
+  color: var(--gray);
+  font-size: 14px;
+}
+.dashboard .reminders .top {
+  padding-bottom: 1em;
+}
+
+/* reminders end */
+
+/* Grid section */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.dashboard .menu {
+  grid-column: 1/13;
+  grid-row: 3;
+}
+.dashboard .middle {
+  grid-column: 1/13;
+  grid-row: 2;
+}
+.dashboard .profile-info {
+  grid-column: 1/13;
+  grid-row: 1;
+}
+
+/* grid section */
+
+/* Recent section */
+
+.dashboard .middle {
+  background-color: #dddef3;
+}
+.middle .recent-notes {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+.middle .recent-notes .top {
+  display: flex;
+  justify-content: space-between;
+}
+.middle .recent-notes .top span {
+  font-size: 17px;
+  font-weight: normal;
+}
+/* Recent section */
 
 /* Small tablet styles */
 @media screen and (min-width: 620px) {
