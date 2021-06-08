@@ -1,0 +1,15 @@
+:root {
+  --primary-black: #111026;
+  --blue: #5e81f4;
+  --red: #ff606d;
+}
+
+.dashboard .grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10;
+}
+
+.dashboard .name {
+  font-family: "Poppins", sans-serif;
+}
