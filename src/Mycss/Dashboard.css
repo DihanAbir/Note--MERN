@@ -51,7 +51,7 @@ body {
   width: 57%;
 }
 
-.dashboard .name {
+.dashboard .menu .name {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -119,7 +119,7 @@ body {
 
 .dashboard .reminders .body {
   width: 80%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   display: flex;
   padding-bottom: 10px;
   justify-content: center;
@@ -175,6 +175,7 @@ body {
 
 /* Recent section */
 
+/* Middle section start */
 .dashboard .middle {
   background-color: #dddef3;
 }
@@ -192,7 +193,107 @@ body {
   font-size: 17px;
   font-weight: normal;
 }
-/* Recent section */
+
+.dashboard .middle .top {
+  font-size: 17px;
+  font-weight: 500;
+}
+.dashboard .middle .body {
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px;
+}
+.dashboard .middle .body li {
+  color: var(--primary-black);
+  font-size: 1rem;
+  padding: 10px 0px;
+  border-bottom: 1px solid var(--gray);
+}
+.dashboard .middle .body li:last-child {
+  border-bottom: none;
+}
+
+/* middle section end */
+
+/* navbar section */
+.dashboard .menu {
+  /* margin-left: auto; */
+}
+.dashboard .menu .hide-nav {
+  display: none;
+}
+.dashboard .menu .show-nav {
+  display: block;
+}
+.dashboard .menu ul {
+  position: fixed;
+  bottom: 60px;
+  right: 0;
+}
+.dashboard .menu ul li {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.dashboard .menu ul .logo {
+  margin-right: 1em;
+  padding-left: 1em;
+  max-width: 40px;
+}
+.dashboard .menu nav ul .name {
+  padding-top: 0em;
+}
+.dashboard .menu button {
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 2em;
+}
+
+/* .dashboard .menu .toggle-button {
+  background-color: transparent;
+  border: none;
+} */
+
+/* .dashboard .menu .bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+} */
+
+/* .dashboard .menu .container,
+.dashboard .menu .change {
+  position: fixed !important;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: flex-end;
+} */
+
+/* .dashboard .menu .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.dashboard .menu .change .bar2 {
+  opacity: 0;
+}
+
+.dashboard .menu .change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+} */
+
+/* navbar section */
 
 /* Small tablet styles */
 @media screen and (min-width: 620px) {

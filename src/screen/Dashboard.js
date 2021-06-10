@@ -1,17 +1,78 @@
-import React from 'react'
-import '../Mycss/Dashboard.css'
+import React, { useState } from 'react';
+import arrow from '../Assets/dashboard/arrow.png';
+import chat from '../Assets/dashboard/chat.png';
+import classes from '../Assets/dashboard/classes.png';
 import profile from '../Assets/dashboard/Ellipse 1.png';
 import backlogo from '../Assets/dashboard/fi-rr-sign-out 1.png';
-import object from '../Assets/dashboard/OBJECT 1.png'
-import Reminder from '../Assets/dashboard/reminder.png'
-import message from '../Assets/dashboard/message.png'
-import arrow from '../Assets/dashboard/arrow.png'
+import home from '../Assets/dashboard/home.png';
+import message from '../Assets/dashboard/message.png';
+import object from '../Assets/dashboard/OBJECT 1.png';
+import Reminder from '../Assets/dashboard/reminder.png';
+import settings from '../Assets/dashboard/settings.png';
+import '../Mycss/Dashboard.css';
+
+
+
+
+
+
+
 const Dashboard = () => {
+    const [style, setStyle] = useState('hide-nav')
+    const [buttonState, setButtonState] = useState('');
+
+    const handleclick = (e) => {
+        if(style ==='show-nav'){
+            setStyle('hide-nav')
+            setButtonState('change')
+        }else if(style == 'hide-nav'){
+            setStyle('show-nav')
+            setButtonState('container')
+        }else{
+            return null
+        }
+
+
+    }
+
     return (
         <div className="dashboard grid">
             {/* Menu */}
             <div className="menu">
-                <h1>menu</h1>
+                <nav className={`${style}`}>
+                    <ul>
+                        <li>
+                            <div className="logo"><img src={home} alt="" srcset="" /></div>
+                            <div className="name">Dashboard</div>
+                        </li>
+                        <li>
+                            <div className="logo"><img src={classes} alt="" srcset="" /></div>
+                            <div className="name">Clasess</div>
+                        </li>
+                        <li>
+                            <div className="logo"><img src={chat} alt="" srcset="" /></div>
+                            <div className="name">chat</div>
+                        </li>
+                        <li>
+                            <div className="logo"><img src={settings} alt="" srcset="" /></div>
+                            <div className="name">Setting</div>
+                        </li>
+                    </ul>
+                </nav>
+               
+                    {/* <div className={`${buttonState}`} onClick={(e)=>handleclick(e)}>
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div> */}
+                    <button onClick={handleclick}>
+                        click
+                    </button>
+                
+
+                <div className="nav-button">
+
+                </div>
             </div>
             {/* menu */}
 
@@ -19,14 +80,15 @@ const Dashboard = () => {
             <div className="middle">
                 <div className="recent-notes">
                     <div className="top">
-                        <span>Recent Notes</span>
+                        <span className="first">Recent Notes</span>
                         <span>More <img src={arrow} alt="" /></span>
                     </div>
-                    <div className="body">
-                        <h4>Unit 5 - Technology</h4>
-                        <h4>Unit 5 - Technology</h4>
-                        <h4>Unit 5 - Technology</h4>
-                    </div>
+                    <ul className="body">
+                        <li>Unit 5 - Technology</li>
+                        <li>Unit 5 - Technology</li>
+                        <li>Unit 5 - Technology</li>
+                        <li>Unit 5 - Technology</li>
+                    </ul>
                 </div>
             </div>
 
@@ -107,9 +169,7 @@ const Dashboard = () => {
                         </li>
                     </ul>
                 </div>
-
             </div>
-
         </div>
     )
 }

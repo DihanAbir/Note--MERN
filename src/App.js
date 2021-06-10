@@ -11,20 +11,17 @@ import Footer from "./component/Footer";
 import Login from "./component/Login";
 import Dashboard from './screen/Dashboard';
 
-// import SubscribeNow from "./component/SubscribeNow";
 
 
 function App(props) {
 
   return (
     <Router>
-           {
-        props.location.pathname!=='/dashboard' ? <Menu/>:null 
-        
+          {
+            props.location.pathname!=='/dashboard' ? <Menu/>:null 
           }
        {/* <Menu /> */}
       <Switch>
-        
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/" component={Landing} />
         <Route exact path="/all_notes" component={AllNotes} />
