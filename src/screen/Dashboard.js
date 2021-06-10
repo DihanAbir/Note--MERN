@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import arrow from '../Assets/dashboard/arrow.png';
+import React, { useState, useEffect } from 'react';
 import chat from '../Assets/dashboard/chat.png';
 import classes from '../Assets/dashboard/classes.png';
 import profile from '../Assets/dashboard/Ellipse 1.png';
@@ -9,6 +8,10 @@ import message from '../Assets/dashboard/message.png';
 import object from '../Assets/dashboard/OBJECT 1.png';
 import Reminder from '../Assets/dashboard/reminder.png';
 import settings from '../Assets/dashboard/settings.png';
+import Chat from '../component/dashboard/Chat';
+import Classes from '../component/dashboard/Classes';
+import Maindashboard from '../component/dashboard/Maindashboard';
+import Settings from '../component/dashboard/Settings';
 import '../Mycss/Dashboard.css';
 
 
@@ -20,6 +23,7 @@ import '../Mycss/Dashboard.css';
 const Dashboard = () => {
     const [style, setStyle] = useState('hide-nav')
     const [buttonState, setButtonState] = useState('');
+    const [showPage, setShowPage] = useState('dashboard')
 
     const handleclick = (e) => {
         if(style ==='show-nav'){
@@ -31,9 +35,11 @@ const Dashboard = () => {
         }else{
             return null
         }
-
-
     }
+
+    useEffect(()=>{
+        showPage
+    },[])
 
     return (
         <div className="dashboard grid">
@@ -41,19 +47,19 @@ const Dashboard = () => {
             <div className="menu">
                 <nav className={`${style}`}>
                     <ul>
-                        <li>
+                        <li onClick={()=> setShowPage('dashboard')}>
                             <div className="logo"><img src={home} alt="" srcset="" /></div>
                             <div className="name">Dashboard</div>
                         </li>
-                        <li>
+                        <li onClick={()=> setShowPage('classes')}>
                             <div className="logo"><img src={classes} alt="" srcset="" /></div>
                             <div className="name">Clasess</div>
                         </li>
-                        <li>
+                        <li onClick={()=> setShowPage('chat')}>
                             <div className="logo"><img src={chat} alt="" srcset="" /></div>
                             <div className="name">chat</div>
                         </li>
-                        <li>
+                        <li onClick={()=>setShowPage('settings')}>
                             <div className="logo"><img src={settings} alt="" srcset="" /></div>
                             <div className="name">Setting</div>
                         </li>
@@ -78,21 +84,14 @@ const Dashboard = () => {
 
             {/* middle */}
             <div className="middle">
-                <div className="recent-notes">
-                    <div className="top">
-                        <span className="first">Recent Notes</span>
-                        <span>More <img src={arrow} alt="" /></span>
-                    </div>
-                    <ul className="body">
-                        <li>Unit 5 - Technology</li>
-                        <li>Unit 5 - Technology</li>
-                        <li>Unit 5 - Technology</li>
-                        <li>Unit 5 - Technology</li>
-                    </ul>
-                </div>
+                {showPage === 'settings' && <Settings />}
+                {showPage === 'dashboard' && <Maindashboard />}
+                {showPage === 'chat' && <Chat />}
+                {showPage === 'classes' && <Classes />}
             </div>
 
             {/* middle */}
+
             <div className="profile-info">
                 <div className="profile">
                     <div className="top-profile">
