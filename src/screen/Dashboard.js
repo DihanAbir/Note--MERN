@@ -24,6 +24,7 @@ const Dashboard = () => {
     const [style, setStyle] = useState('hide-nav')
     const [buttonState, setButtonState] = useState('');
     const [showPage, setShowPage] = useState('dashboard')
+    const [hideNavButton, setHidenavButton] = useState(false);
 
     const handleclick = (e) => {
         if(style ==='show-nav'){
@@ -37,9 +38,19 @@ const Dashboard = () => {
         }
     }
 
+
+
     useEffect(()=>{
-        showPage
-    },[])
+        if(window.innerWidth > 620){
+            setStyle('show-nav')
+            setHidenavButton(true);
+            // const navbutton = window.document.getElementById('navbutton');
+            // navbutton.style.display="none"
+        }else{
+            setHidenavButton(false)
+        }
+        
+    },[hideNavButton, window.innerWidth, setHidenavButton])
 
     return (
         <div className="dashboard grid">
@@ -63,26 +74,22 @@ const Dashboard = () => {
                             <div className="logo"><img src={settings} alt="" srcset="" /></div>
                             <div className="name">Setting</div>
                         </li>
+
                     </ul>
                 </nav>
-               
-                    {/* <div className={`${buttonState}`} onClick={(e)=>handleclick(e)}>
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div> */}
-                    <button onClick={handleclick}>
+                <nav>
+                    <button 
+                        className={hideNavButton ? 'show-it' : 'hide-it'}
+                        onClick={handleclick}
+                    >
                         click
                     </button>
-                
-
-                <div className="nav-button">
-
-                </div>
+                </nav>
             </div>
             {/* menu */}
 
             {/* middle */}
+                {/* show specific file by button click */}
             <div className="middle">
                 {showPage === 'settings' && <Settings />}
                 {showPage === 'dashboard' && <Maindashboard />}
