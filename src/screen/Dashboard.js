@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
 import chat from '../Assets/dashboard/chat.png';
 import classes from '../Assets/dashboard/classes.png';
 import profile from '../Assets/dashboard/Ellipse 1.png';
@@ -40,23 +41,30 @@ const Dashboard = () => {
 
 
 
-    useEffect(()=>{
-        if(window.innerWidth > 620){
-            setStyle('show-nav')
-            setHidenavButton(true);
-            // const navbutton = window.document.getElementById('navbutton');
-            // navbutton.style.display="none"
-        }else{
-            setHidenavButton(false)
-        }
+    // useEffect(()=>{
+    //     if(window.innerWidth > 620){
+    //         setStyle('show-nav')
+    //         setHidenavButton(true);
+    //         // const navbutton = window.document.getElementById('navbutton');
+    //         // navbutton.style.display="none"
+    //     }else{
+    //         setHidenavButton(false)
+    //     }
         
-    },[hideNavButton, window.innerWidth, setHidenavButton])
+    // },[hideNavButton, window.innerWidth, setHidenavButton])
+
+    const handleChange = ()=> {
+        if(window.innerWidth > 620){
+            setStyle('show-nav');
+            setHidenavButton(true)
+        }
+    }
 
     return (
-        <div className="dashboard grid">
+        <div onChange={handleChange} className="dashboard grid">
             {/* Menu */}
             <div className="menu">
-                <nav className={`${style}`}>
+                <nav className={`${style} for-mid-screen`}>
                     <ul>
                         <li onClick={()=> setShowPage('dashboard')}>
                             <div className="logo"><img src={home} alt="" srcset="" /></div>
@@ -79,7 +87,7 @@ const Dashboard = () => {
                 </nav>
                 <nav>
                     <button 
-                        className={hideNavButton ? 'show-it' : 'hide-it'}
+                        className={hideNavButton ? 'show-it' : 'hide-it for-mid-screen'}
                         onClick={handleclick}
                     >
                         click
@@ -103,7 +111,7 @@ const Dashboard = () => {
                 <div className="profile">
                     <div className="top-profile">
                         <span>logout</span>
-                        <span><img className="image" src={backlogo} alt="" /></span>
+                        <span><Link to="/"><img className="image" src={backlogo} alt="" /> </Link></span>
                     </div>
                     <img src={profile} alt="" />
                     <div className="name">Sadia Tasnim</div>
