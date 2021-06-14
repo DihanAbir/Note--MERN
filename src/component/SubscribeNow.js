@@ -13,13 +13,14 @@ const SubscribeNow = () => {
       <div className="subscribe_part2">
         <p>subscribe now</p>
         <h1>Get every single update you will get</h1>
-        <form action="" className="form_style">
           <div className="form_innerstyle">
-            <img src={Email} alt="" />
-            <input type="text" name="" id="" />
+            <form className="sub-form">
+              <img src={Email} alt="" />
+              <input className="input-field" type="text" name="" id="" />
+              <input className="sub-button" type="submit" name="submit" value="subscribe now" />
+            </form>
           </div>
-          <Button>subscribe now</Button>
-        </form>
+          {/* <Button>subscribe now</Button> */}
       </div>
     </div>
   );

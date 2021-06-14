@@ -1,12 +1,29 @@
-* {
-  padding: 0px;
-  margin: 0;
+:root {
+  --primary-black: #111026;
+  --blue: #5e81f4;
+  --red: #ff606d;
+  --gray: #a2a2c2;
+  --main-font: "Poppins", sans-serif;
+}
+
+/* no.1 fixings */
+ul,
+li,
+a {
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+  padding-left: 1em;
+}
+body {
   box-sizing: border-box;
 }
+
 body {
   background-color: #fff !important;
   margin: 0;
-  font-family: "Georgia", sans-serif !important;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 

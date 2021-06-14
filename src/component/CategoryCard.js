@@ -26,10 +26,12 @@ function CategoryCard() {
       describtion: "Lorem ipsum dour maiores quas, praesentium quasi laborum.",
     },
   ]);
+
+
   return (
     <div className="all_cardList">
       {card.map((card) => (
-        <Link style={{textDecoration:'none'}} to="/note_description">
+        <Link className="card-link" style={{textDecoration:'none'}} to="/note_description">
           <div className="catagory_card">
             <div className="card_image">
               <img src={card.profileImg} alt="" />

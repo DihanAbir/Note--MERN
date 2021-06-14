@@ -34,12 +34,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* .dashboard .grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 10;
-} */
-
 /* Profile start */
 .dashboard .top-profile {
   display: flex;
@@ -413,7 +407,7 @@ body {
   }
 
   .dashboard .profile-info {
-    grid-column: 9/12;
+    grid-column: 9/13;
     grid-row: 1;
   }
   .middle .recent-notes {
