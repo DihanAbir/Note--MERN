@@ -1,11 +1,18 @@
-.inner_container{
-    position: relative;
-    top: -300px;
-  }
+.inner_container {
+  position: relative;
+  top: -300px;
+}
 
- .top_container{
-  
-    margin: 0px 100px;
+.top_container {
+  margin: 0px 100px;
+}
+#search {
+  width: 30%;
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 0px 5px;
+}
 
- }
- 
+#search:focus {
+  outline: none;
+}
