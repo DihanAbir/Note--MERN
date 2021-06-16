@@ -1,12 +1,14 @@
-.container{
+.container {
   padding: 0 !important;
 }
- .our_container {
+.our_container {
   background-color: #f0f4f9 !important;
   height: 100px;
   margin: 0px;
 }
-
+.Link:hover {
+  text-decoration: none;
+}
 
 /* banner */
 
@@ -14,25 +16,15 @@
 
 /* subscribe now */
 
-
 /* footer */
 
-
-
 /* filter */
-
 
 /* allnots
  */
 
-
-
-
- /* for scroll */
-
-
+/* for scroll */
 
 /* top container */
-
 
 /* hero section */
