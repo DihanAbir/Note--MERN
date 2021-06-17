@@ -1,14 +1,27 @@
 import React, { useEffect } from "react";
-import "../Mycss/AllCategory.css";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+
 import noteData from "../Data/Notes";
 import thumbnails from "../Data/Thunbnail";
-import { Link } from "react-router-dom";
+import { noteAction } from "../Action/NoteAction";
+
+import "../Mycss/AllCategory.css";
 
 export default function Category() {
-  console.log(`noteData`, noteData);
+  const dispatch = useDispatch();
 
+  const Notes = useSelector((state) => state.note);
+  const { loading, error, noteInfo } = Notes;
+
+  useEffect(() => {
+    dispatch(noteAction());
+  }, []);
+
+  console.log(`category page theke : `, noteInfo);
+  console.log(`category page theke : `, noteData);
+  // filter section
   const key = "category";
-
   const arrayUniqueByKey = [
     ...new Map(noteData.map((item) => [item[key], item])).values(),
   ];

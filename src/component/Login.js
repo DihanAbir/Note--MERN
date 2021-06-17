@@ -25,6 +25,7 @@ function Login({ history }) {
     error: regError,
     userInfo: regUserInfo,
   } = userRegister;
+  
   console.log(`regError`, regError);
   const redirect = "/";
 
