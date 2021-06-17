@@ -15,6 +15,7 @@ import NoteDescription from "./component/NoteDescription.js";
 import Footer from "./component/Footer";
 import Login from "./component/Login";
 import Dashboard from "./screen/Dashboard";
+import Test from "./component/Test";
 
 function App(props) {
   return (
@@ -27,6 +28,7 @@ function App(props) {
         <Route exact path="/all_notes/:catName" component={AllNotes} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/note_description" component={NoteDescription} />
+        <Route exact path="/test" component={Test} />
       </Switch>
 
       {props.location.pathname !== "/dashboard" ? <Footer /> : null}

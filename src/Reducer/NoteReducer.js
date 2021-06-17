@@ -1,17 +1,17 @@
 import {
   NOTE_FAIL,
   NOTE_REQUEST,
-  NOTE_SUCCESS,
+  NOTE_SUCCESS
 } from "../constants/NoteConstants";
 
-export const noteReducer = (state = [], action) => {
+
+export const noteReducer = (state = {allNotes: []}, action) => {
   const { type, payload } = action;
-  // eslint-disable-next-line default-case
   switch (type) {
     case NOTE_REQUEST:
-      return { loading: true };
+      return { loading: true, allNotes:[] };
     case NOTE_SUCCESS:
-      return { loading: false, noteInfo: payload };
+      return { loading: false, allNotes : payload.data };
     case NOTE_FAIL:
       return { loading: false, error: payload };
 

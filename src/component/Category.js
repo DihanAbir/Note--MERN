@@ -1,36 +1,37 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-
-import noteData from "../Data/Notes";
-import thumbnails from "../Data/Thunbnail";
+import { Link } from "react-router-dom";
 import { noteAction } from "../Action/NoteAction";
-
+import thumbnails from "../Data/Thunbnail";
 import "../Mycss/AllCategory.css";
+
+
 
 export default function Category() {
   const dispatch = useDispatch();
 
   const Notes = useSelector((state) => state.note);
-  const { loading, error, noteInfo } = Notes;
+  const { loading, allNotes } = Notes;
+  console.log(`Notes`, allNotes)
 
   useEffect(() => {
     dispatch(noteAction());
   }, []);
 
-  console.log(`category page theke : `, noteInfo);
-  console.log(`category page theke : `, noteData);
+  // console.log(`category page theke : `, noteInfo);
+  // console.log(`category page theke : `, noteData);
   // filter section
   const key = "category";
   const arrayUniqueByKey = [
-    ...new Map(noteData.map((item) => [item[key], item])).values(),
+    ...new Map(allNotes.map((item) => [item[key], item])).values(),
   ];
   var rndval;
 
   return (
     <div className="category-main">
       <div className="row">
-        {arrayUniqueByKey.map(
+      {loading && <h1>loading</h1>}
+        { arrayUniqueByKey.map(
           (Notecat) => (
             (rndval =
               thumbnails[Math.floor(Math.random() * thumbnails.length)]),
