@@ -11,11 +11,12 @@ export const noteAction = () => async (dispatch) => {
     dispatch({ type: NOTE_REQUEST });
 
     const { data } = await axios.get("http://localhost:5000/api/v1/note");
-    const allNotes = data.data[0];
-    console.log(`data => note action theke: `, typeof allNotes);
+    // const allNotes = data;
+    console.log(`data => note action theke: `, typeof data);
+    console.log(`data => note action theke: `, data);
 
-    dispatch({ type: NOTE_SUCCESS, payload: allNotes });
-    localStorage.setItem("userInfo", JSON.stringify(data));
+    dispatch({ type: NOTE_SUCCESS, payload: data });
+    // localStorage.setItem("userInfo", JSON.stringify(data));
   } catch (error) {
     dispatch({
       type: NOTE_FAIL,
