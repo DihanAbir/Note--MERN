@@ -19,10 +19,12 @@ export default function Category() {
   }, []);
 
   console.log(`category page theke : `, noteInfo);
+  console.log(`category page theke : `, typeof noteInfo); //make it array
   console.log(`category page theke : `, noteData);
   // filter section
   const key = "category";
   const arrayUniqueByKey = [
+    //array ashle notedata er jaygay noteInfo boshaben
     ...new Map(noteData.map((item) => [item[key], item])).values(),
   ];
   var rndval;
